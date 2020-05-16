@@ -23,8 +23,10 @@
       const secretCode = 'skibiak';
       window.addEventListener('keypress', (e) => {
         pressedKeys.push(e.key);
-        pressedKeys.splice(-secretCode.length - 1, pressedKeys.length - secretCode.length)
-        if (pressedKeys.join("").includes(secretCode)) {
+        pressedKeys.splice(-8, pressedKeys.length - secretCode.length);
+        console.log(`splicing -8, ${pressedKeys.length - secretCode.length}`)
+        console.log(pressedKeys);
+        if (pressedKeys.join('').includes(secretCode)) {
           cornify_add();
         }
       });
